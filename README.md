@@ -18,7 +18,7 @@ Dashboard analitik berbasis Streamlit untuk memantau indikator pasar tenaga kerj
 ```
 
 - `streamlit_app.py` adalah entry point yang dibaca oleh Streamlit Community Cloud maupun `streamlit run`.
-- `dashboards/indonesia_labor_dashboard.py` menyimpan logika utama visualisasi.
+- `dashboards/indonesia_labor_dashboard.py` menyimpan logika utama visualisasi yang kini terbagi dalam beberapa modul intelijen (macro overview, supply-demand, benchmarking, early warning, policy tracker, citizen tools).
 - `data/indonesia_labor_market.csv` berisi dataset sintetis untuk ditampilkan di dashboard.
 - `requirements.txt` memastikan dependensi terpasang saat deploy.
 
@@ -58,6 +58,20 @@ Dashboard analitik berbasis Streamlit untuk memantau indikator pasar tenaga kerj
    - **Python version**: gunakan versi default atau sesuaikan dengan lokal.
    - **Packages**: Streamlit akan membaca `requirements.txt` secara otomatis.
 4. Klik *Deploy* dan tunggu hingga build selesai. Aplikasi akan tersedia di URL publik yang dapat dibagikan.
+
+### Modul Dashboard
+
+Dashboard kini terdiri dari sembilan tab utama:
+
+1. **Talent Control Tower**: Bar chart race GTCI, gauge pilar, serta simulator kebijakan berbasis skenario untuk mengejar kompetisi talent ASEAN.
+2. **Digital Readiness Map**: Peta pydeck yang menggabungkan IMDI & literasi digital, analitik mismatch wired-vs-skilled, serta radar diagnostik provinsi.
+3. **Real-Time Demand**: Tracker lowongan vs PHK, heatmap skill genome, top emerging skills, mismatch kalkulator, dan scorecard Decent Work vs ASEAN.
+4. **Macro Overview**: KPI nasional, tren TPT/TPAK, dan explorer provinsi.
+5. **Supply-Demand & Skill Gap**: Indeks supply-demand, gap provinsi, heatmap struktur sektor, dan radar skill.
+6. **Regional Benchmarking**: Komparasi KPI antar-provinsi, trajektori historis, dan scorecard melawan rata-rata nasional.
+7. **Early Warning System**: Deteksi lonjakan TPT, pulse indikator leading, dan proxy indeks lowongan SiapKerja.
+8. **Policy Lab**: Tracker RPJMN dengan gauge, plus benchmark ASEAN/G20.
+9. **Pelatihan & Citizen Tools**: Direktori BLK dengan unduhan CSV dan kalkulator estimasi gaji sektoral.
 
 ## Pengembangan Lanjutan
 
